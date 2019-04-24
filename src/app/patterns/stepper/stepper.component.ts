@@ -9,14 +9,78 @@ import { baseURL } from '../../../data';
   styleUrls: ['./stepper.component.scss'],
 })
 export class StepperComponent implements OnInit {
-  user; 
+  user: any;
   state1: String = 'none';
   state2: String = 'none';
   state3: String = 'none';
   blockSave: boolean = true;
-  
-  constructor(private _titleService: Title,
-              public media: TdMediaService) {
+
+  states: String[] = [
+    'AL',
+    'AK',
+    'AS',
+    'AZ',
+    'AR',
+    'CA',
+    'CO',
+    'CT',
+    'DE',
+    'DC',
+    'FM',
+    'FL',
+    'GA',
+    'GU',
+    'HI',
+    'ID',
+    'IL',
+    'IN',
+    'IA',
+    'KS',
+    'KY',
+    'LA',
+    'ME',
+    'MH',
+    'MD',
+    'MA',
+    'MI',
+    'MN',
+    'MS',
+    'MO',
+    'MT',
+    'NE',
+    'NV',
+    'NH',
+    'NJ',
+    'NM',
+    'NY',
+    'NC',
+    'ND',
+    'MP',
+    'OH',
+    'OK',
+    'OR',
+    'PW',
+    'PA',
+    'PR',
+    'RI',
+    'SC',
+    'SD',
+    'TN',
+    'TX',
+    'UT',
+    'VT',
+    'VI',
+    'VA',
+    'WA',
+    'WV',
+    'WI',
+    'WY',
+    'AE',
+    'AA',
+    'AP',
+  ];
+
+  constructor(private _titleService: Title, public media: TdMediaService) {
     Object.assign(this, { baseURL });
   }
 
@@ -30,16 +94,16 @@ export class StepperComponent implements OnInit {
       email: '',
       nickname: '',
       address: {
-         street: '',
-         street2: '',
-         city: '',
-         state: '',
-         postcode: '',
+        street: '',
+        street2: '',
+        city: '',
+        state: '',
+        postcode: '',
       },
     };
   }
 
-  update(step, isValid): void {
+  update(step: number, isValid: any): void {
     switch (step) {
       case 1:
         if (isValid) {
@@ -62,6 +126,8 @@ export class StepperComponent implements OnInit {
         } else {
           this.state3 = 'required';
         }
+        break;
+      default:
     }
-  } 
+  }
 }

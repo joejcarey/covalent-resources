@@ -1,8 +1,8 @@
 {
-  "name": "covalent-resources",
+  "name": "covalent-sandbox",
   "version": "1.0.0",
   "private": true,
-  "description": "Resources for docs, demos and sketch",
+  "description": "Best practices and examples of Covalent layouts and patterns",
   "keywords": [
     "angular",
     "components",
@@ -32,11 +32,8 @@
   "author": "Teradata UX",
   "contributors": [
     "Kyle Ledbetter <kyle.ledbetter@teradata.com>",
-    "Richa Vyas <richa.vyas@teradata.com>",
-    "Ed Morales <eduardo.morales@teradata.com>",
-    "Jason Weaver <jason.weaver@teradata.com>",
-    "Jeremy Smartt <jeremy.smartt@teradata.com>",
-    "Ilsun Park <ilsun.park@teradata.com>"
+    "Natasha Radushkevich <natalia.radushkevich@teradata.com>",
+    "Jenn Medellin <jennifer.medellin@teradata.com>"
   ],
   "dependencies": {
     "@angular/animations": "7.0.0",
